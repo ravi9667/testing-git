@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signUp-card">
+            <div class="signUp-main">
+                <p class="signUp-title">Sign Up</p>
+                <form class="signUp-input">
+                    <div class="input-box">
+                        <input class="inputs" id="signup-name" type="text" required>
+                        <label class="signUp-label">Name</label>
+                        <img class="signUp-images" src="./images/user.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <input class="inputs" id="signup-email" type="email" required>
+                        <label class="signUp-label">Email</label>
+                        <img class="signUp-images" src="./images/mail.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <input class="inputs" id="signup-password" type="password" required>
+                        <label class="signUp-label">Password</label>
+                        <img class="signUp-images" src="./images/padlock.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <input class="inputs" id="signup-phoneNum" type="number" required>
+                        <label class="signUp-label">Phone Number</label>
+                        <img class="signUp-images" src="./images/call.png" alt="">
+                    </div>
+                </form>
+                <div class="signUp-btns">
+                    <button id="signUp-btn" type="submit" onclick="addData()">Sign Up</button>
+                    <p class="sign-up-link"> Already Have an Account? <a href="./login.html">Login</a> </p>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

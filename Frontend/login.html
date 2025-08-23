@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader" style="display: none;">
+    </div>
+    <div class="container">
+        <div class="login-card">
+            <div class="login-main">
+                <p class="login-title">Login</p>
+                <form class="login-input">
+                    <div class="input-box">
+                        <input type="email" class="inputs" id="login-email" required>
+                        <label class="login-label">Email</label>
+                        <img src="./images/mail.png" alt="Email-Gif" class="login-images">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="inputs" id="login-password" required>
+                        <label class="login-label">Password</label>
+                        <img src="./images/padlock.png" alt="Password-gif" class="login-images">
+                        <div class="showPass-container">
+                            <input type="checkbox">
+                            <label for="show-check" class="show-password">Show Password</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="login-btns">
+                    <button id="login-btn" type="submit" onclick="loginFetchData()">Login</button>
+                    <p class="sign-up-link"> Don't Have an Account? <a href="./signUp.html">Sign-Up</a> </p>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+        <div class="changeNum-box">
+            <h1>Updating Data</h1>
+            <div>
+                <p>Phone Number</p>
+                <p></p>
+            </div>
+            <div>
+                <p>New Phone Number</p>
+                <input type="number" required>
+            </div>
+            <button type="submit">Update Contact</button>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body> 
+
+</html>
