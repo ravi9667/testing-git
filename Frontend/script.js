@@ -73,3 +73,22 @@ async function loginFetchData() {
         console.log(err)
     }
 }
+
+let btn = document.querySelectorAll(".login-btn");
+
+btn.forEach((a) => {
+    let btnWidth = a.offsetWidth;        // get button width
+    let spanWidth = 2;                   // each span is 2px wide
+    let count = Math.ceil(btnWidth / spanWidth); // how many spans needed
+
+    for (let i = 0; i < count; i++) {
+        let span = document.createElement("span");
+        span.style.left = `${i * spanWidth}px`;
+        span.style.width = spanWidth + "px"; // ensure fixed width
+        a.append(span);
+
+        // add random delay for animation
+        let random = Math.random(); // between 0–1
+        span.style.transitionDelay = random + "s";    
+    }
+});
