@@ -9,9 +9,10 @@
 }
 
 body {
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    background: url('./images/ChatGPT\ Image\ Aug\ 14\,\ 2025\,\ 07_37_32\ AM.png') no-repeat center center;
+    background: url('./background.png') no-repeat center center;
     background-size: 100vw 100vh; /* height exactly equals viewport height */
 }
 .spinner {
@@ -75,6 +76,7 @@ body {
     flex-direction: column;
     gap: 30px;
     width: 250px;
+    z-index: 10;
 }
 .signUp-input {
     display: flex;
@@ -89,6 +91,9 @@ body {
     font-size: 30px;
     color: rgb(255, 0, 149);
     filter: drop-shadow(0 0 50px rgb(238, 102, 181)) drop-shadow(0 0 10px rgb(209, 0, 122));
+}
+.login {
+    font-size: 40px;
 }
 .inputs {
     width: 100%;
@@ -141,13 +146,13 @@ body {
     flex-direction: column;
     gap: 30px;
 }
-img {
+.login-images {
     filter: invert(1);
     transition: .5s;
 }
 .input-box input:focus~img,
 .input-box input:valid~img {
-    filter: invert();
+    filter: brightness(0) saturate(100%) invert(23%) sepia(97%) saturate(5000%) hue-rotate(310deg) brightness(95%) contrast(105%);
 }
 .showPass-container {
     display: flex;
@@ -175,13 +180,87 @@ img {
     justify-content: center;
     gap: 7px;
 }
-#login-btn, #signUp-btn {
+/* #login-btn, #signUp-btn {
     width: 100%;
     height: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: 500;
-}
+} */
 .sign-up-link {
     color: #fff;
+    margin-top: 5px;
+    z-index: 3;
+}
+.sign-up-link a {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgb(0, 0, 255), 0 0 10px navy;
+}
+.login-btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0a0720;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 1s;
+    text-transform:capitalize;
+    overflow: hidden;
+    z-index: 1;
+    filter: drop-shadow(0 0 5px #e50914) drop-shadow(0 0 15px #e50914);
+}
+.login-btn:focus {
+    color: white;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 149)) drop-shadow(0 0 17px rgb(255, 0, 149));
+    letter-spacing: 2px;
+    border: 2px solid rgb(255, 0, 149);
+    text-shadow: 0 0 10px rgb(255, 0, 149),0 0 30px rgb(255, 0, 149),0 0 40px rgb(255, 0, 149), 0 0 50px rgb(255, 0, 149);
+}
+.login-btn span {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #0a0720;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    border-radius: 20px;
+}
+.login-btn:focus span {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+.login-btn span:nth-child(even) {
+    transform-origin: top;
+}
+.login-btn:focus span:nth-child(even) {
+    transform-origin: bottom;
+}
+
+.mc-img {
+    width: 930px;
+    position: relative;   
+    bottom: 100px;
+    left: -200px;
+    /* filter: drop-shadow(10px 0 5px rgb(255, 0, 149)) drop-shadow(10px 0 17px rgb(255, 0, 149)); */
+    filter: drop-shadow(10px 0 5px #040211) drop-shadow(10px 0 17px #040211);
+    /* filter: drop-shadow(0 0 5px rgb(255, 0, 149)) drop-shadow(0 0 17px rgb(255, 0, 149)); */
+}
+.icon-img {
+    position: absolute;
+    filter: drop-shadow(10px 0 5px #040211) drop-shadow(10px 0 17px #040211);
+    /* filter: drop-shadow(0 0 5px rgb(255, 0, 149)) drop-shadow(0 0 17px rgb(255, 0, 149)); */
+    width: 260px;
+    left: 240px;
+    top: 255px;
+    z-index: 2;
 }
