@@ -36,7 +36,7 @@ app.post("/signUp", async (req, res) => {
         const addUserData = {
             name,
             email,
-            password: hashedPassword,
+            password,
             phoneNumber,
         };
 
@@ -63,12 +63,12 @@ app.post("/login", async (req, res) => {
         console.log(req.body)
 
         const result = await UserData.find({email:email, password:password});
-        if(!result) {
+        if (result.length === 0) {
             return res.status(400).send({
                 ok: false,
-                message: 'Email and PassWord is not Exist'
+                message: 'Email or password is incorrect'
             });
-        };
+        }
 
         console.log(result)
         res.status(200).send({
